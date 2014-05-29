@@ -5,7 +5,7 @@
  * text message. Other data, such as author and time, are also stored.
  */
  
-public class MessagePost
+public class MessagePost extends Post
 {
 	private String message;
 
@@ -15,9 +15,10 @@ public class MessagePost
      * @param author    The username of the author of this post.
      * @param text      The text of this post.
      */
-	public MessagePost(String message)
+	public MessagePost(String username, String message)
 	{
-		this.message = message;
+		super(username);
+	    this.message = message;
 	}
 	
     /**
